@@ -52,24 +52,6 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                     },
                 })}
             />
-            {/* <Global
-                styles={[
-                    {
-                        '@font-face': {
-                            fontFamily: 'ObjectSans',
-                            src: `url('/fonts/PPObjectSans-Regular.woff2') format("woff2")`,
-                            fontWeight: 'normal',
-                        },
-                    },
-                    {
-                        '@font-face': {
-                            fontFamily: 'ObjectSans',
-                            src: `url('/fonts/PPObjectSans-Heavy.woff2') format("woff2")`,
-                            fontWeight: 'bold',
-                        },
-                    },
-                ]}
-            /> */}
 
             <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
                 <MantineProvider
@@ -91,7 +73,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                         //         fontSize: 37,
                         //     },
                         // },
-                        // primaryColor: 'lime',
+                        primaryColor: 'green',
                         // defaultRadius: 8,
                     }}
                     styles={{

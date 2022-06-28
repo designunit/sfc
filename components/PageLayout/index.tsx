@@ -30,7 +30,6 @@ const items = [
 
 const useStyles = createStyles((theme) => ({
     header: {
-        borderBottom: 'none',
         zIndex: 500,
 
         [theme.fn.smallerThan('xs')]: {
@@ -38,12 +37,11 @@ const useStyles = createStyles((theme) => ({
         },
     },
     footer: {
-        borderTopColor: '#76787A',
-        borderTopWidth: 2,
-        padding: 22,
+        paddingTop: 20,
         marginBottom: 20,
     },
     container: {
+        height: '100%',
         maxWidth: 1220,
         display: 'flex',
         justifyContent: 'space-between',
@@ -63,6 +61,21 @@ const useStyles = createStyles((theme) => ({
             fontSize: '1.5rem',
         },
     },
+    containerFooter: {
+        height: '100%',
+        maxWidth: 1220,
+        display: 'flex',
+        flexWrap: 'nowrap',
+    },
+    groupFooter: {
+        width: '100%',
+
+        '& > div': {
+            minWidth: 100,
+            height: '100%',
+            position: 'relative',
+        }
+    }
 }))
 
 export const PageLayout: React.FC = ({ children }) => {
@@ -74,7 +87,7 @@ export const PageLayout: React.FC = ({ children }) => {
             <AppShell
                 header={(
                     <Header
-                        height={80}
+                        height={60}
                         className={s.header}
                         fixed
                     >
@@ -115,7 +128,6 @@ export const PageLayout: React.FC = ({ children }) => {
                                                 component='a'
                                                 className={s.button}
                                             >
-
                                                 {x.content}
                                             </Button>
                                         </Link>
@@ -127,35 +139,45 @@ export const PageLayout: React.FC = ({ children }) => {
                 )}
                 footer={(
                     <Footer
-                        height={80}
+                        height={100}
                         className={s.footer}
                     >
                         <Container
                             fluid
-                            className={s.container}
+                            className={s.containerFooter}
                         >
                             <Group
                                 grow
                                 spacing={'lg'}
+                                className={s.groupFooter}
+                                position='apart'
                             >
                                 <div>
                                     <Image
                                         src={mosty}
+                                        layout='fill'
+                                        objectFit='contain'
                                     />
                                 </div>
                                 <div>
                                     <Image
                                         src={mrl}
+                                        layout='fill'
+                                        objectFit='contain'
                                     />
                                 </div>
                                 <div>
                                     <Image
                                         src={midGerm}
+                                        layout='fill'
+                                        objectFit='contain'
                                     />
                                 </div>
                                 <div>
                                     <Image
                                         src={goroda}
+                                        layout='fill'
+                                        objectFit='contain'
                                     />
                                 </div>
                             </Group>

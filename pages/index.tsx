@@ -1,23 +1,18 @@
 import { PageLayout } from '../components/PageLayout'
-import { Hero } from '../components/Hero'
-import { About } from '../components/About'
-import { Feedback } from '../components/Feedback'
-import { Cards } from '../components/Cards'
-import { Partners } from '../components/Partners'
-import qs from 'qs'
+import { IndexHero } from '../components/IndexHero'
+import { IndexText } from '../components/IndexText'
+import { Button, Group } from '@mantine/core'
+import Link from 'next/link'
+import { IndexButtons } from '../components/IndexButtons'
 
 export default function HomePage() {
     return (
         <PageLayout>
-            {/* <Hero />
+            <IndexHero />
 
-            <span id='ideas' />
-            <Cards
-                data={data}
-            />
-
-            <span id='partners' />
-            <Partners /> */}
+            <IndexText />
+            
+            <IndexButtons />
         </PageLayout>
     )
 }
