@@ -1,5 +1,4 @@
 import { createStyles, Container, Overlay, Center, Title } from '@mantine/core'
-import hero from '/public/hero.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -16,13 +15,12 @@ const useStyles = createStyles((theme) => ({
         maxWidth: 1220,
         minHeight: 500,
         maxHeight: 500,
-        marginTop: '8rem',
+        marginTop: '6rem',
         display: 'flex',
         justifyContent: 'center',
 
         [theme.fn.smallerThan('sm')]: {
             maxHeight: 'unset',
-            padding: 'unset',
         },
     },
     swiper: {
@@ -36,22 +34,22 @@ const useStyles = createStyles((theme) => ({
 const data = [
     {
         src: one,
-        content: 'TEXT',
+        content: 'Программа Зеленые города',
         href: '/'
     },
     {
         src: two,
-        content: 'TEXT',
+        content: 'Инвентаризация деревьев',
         href: '/'
     },
     {
         src: three,
-        content: 'TEXT',
+        content: 'Croudforse',
         href: '/'
     },
     {
         src: four,
-        content: 'TEXT',
+        content: 'сообщество',
         href: '/'
     },
 ]
@@ -99,7 +97,11 @@ export const IndexHero = () => {
                                             justifyContent: 'center',
                                         }}
                                     >
-                                        <Title>
+                                        <Title
+                                            style={{
+                                                textAlign: 'center',
+                                            }}
+                                        >
                                             {x.content}
                                         </Title>
                                     </Overlay>

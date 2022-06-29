@@ -50,6 +50,13 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                     '#__next': {
                         height: '100%',
                     },
+
+                    'main': {
+                        padding: '0 !important',
+                    },
+                    'a': {
+                        color: theme.colors.green[7],
+                    },
                 })}
             />
 

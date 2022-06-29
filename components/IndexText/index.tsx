@@ -1,12 +1,10 @@
-import { createStyles, Container, Center, Title, Stack, Text } from '@mantine/core'
-import hero from '/public/hero.svg'
-import Image from 'next/image'
-import Link from 'next/link'
+import { createStyles, Container, Title, Stack, Text } from '@mantine/core'
 
 const useStyles = createStyles((theme) => ({
     container: {
         position: 'relative',
-        marginTop: '4rem',
+        maxWidth: 1220,
+        marginTop: '2rem',
     },
 }))
 

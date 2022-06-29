@@ -4,7 +4,8 @@ import Link from 'next/link'
 const useStyles = createStyles((theme) => ({
     container: {
         position: 'relative',
-        marginTop: '4rem',
+        maxWidth: 1220,
+        marginTop: '2rem',
     },
 }))
 

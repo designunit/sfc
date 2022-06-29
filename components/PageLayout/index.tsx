@@ -1,4 +1,4 @@
-import { createStyles, Header, Footer, Group, Container, Text, AppShell, Navbar, MediaQuery, Burger, Center, Stack, Button } from '@mantine/core'
+import { createStyles, Header, Footer, Group, Container, Text, AppShell, Navbar, MediaQuery, Burger, Center, Stack, Button, Drawer } from '@mantine/core'
 import logo from '/public/logo.svg'
 import logoDom from '/public/logoDom.svg'
 import Image from 'next/image'
@@ -47,19 +47,7 @@ const useStyles = createStyles((theme) => ({
         justifyContent: 'space-between',
     },
     button: {
-        textDecoration: 'none',
-        '&:hover': {
-            textDecoration: 'underline',
-        },
 
-
-        // 10 on ipad but 1.5 on iphone
-        [theme.fn.smallerThan('lg')]: {
-            fontSize: 10,
-        },
-        [theme.fn.smallerThan('md')]: {
-            fontSize: '1.5rem',
-        },
     },
     containerFooter: {
         height: '100%',
@@ -74,6 +62,10 @@ const useStyles = createStyles((theme) => ({
             minWidth: 100,
             height: '100%',
             position: 'relative',
+
+            [theme.fn.smallerThan('xs')]: {
+                minWidth: 75,
+            },
         }
     }
 }))
@@ -185,36 +177,65 @@ export const PageLayout: React.FC = ({ children }) => {
                     </Footer>
                 )}
 
-                navbar={
-                    <MediaQuery largerThan={'sm'} styles={{ display: 'none' }}>
-                        <Navbar
-                            hiddenBreakpoint={'sm'}
-                            hidden={!opened}
-                            fixed
+            // navbar={
+            //     <MediaQuery largerThan={'sm'} styles={{ display: 'none' }}>
+            //         <Navbar
+            //             hiddenBreakpoint={'sm'}
+            //             hidden={!opened}
+            //             fixed
+            //             style={{
+            //                 zIndex: 400,
+            //                 height: '100%',
+            //                 paddingLeft: '1rem',
+            //                 paddingTop: '1rem',
+            //             }}
+            //         >
+            //             <Stack
+            //                 spacing={24}
+            //             >
+            //                 {items.map((x, i) => (
+            //                     <a
+            //                         key={i}
+            //                         href={x.href}
+            //                         className={s.button}
+            //                         onClick={() => setOpened(false)}
+            //                     >
+            //                         {x.content}
+            //                     </a>
+            //                 ))}
+            //             </Stack>
+            //         </Navbar>
+            //     </MediaQuery>
+            // }
+            >
+                <MediaQuery largerThan={'sm'} styles={{ display: 'none' }}>
+                    <Drawer
+                        opened={opened}
+                        onClose={() => setOpened(false)}
+                        size='calc(min(100%, 500px))'
+                        position='right'
+                    >
+                        <Stack
+                            spacing={24}
                             style={{
-                                zIndex: 400,
-                                height: '100%',
-                                paddingLeft: '1rem',
+                                paddingTop: 40,
+                                paddingRight: '1.5rem',
+                                textAlign: 'right',
                             }}
                         >
-                            <Stack
-                                spacing={24}
-                            >
-                                {items.map((x, i) => (
-                                    <a
-                                        key={i}
-                                        href={x.href}
-                                        className={s.button}
-                                        onClick={() => setOpened(false)}
-                                    >
-                                        {x.content}
-                                    </a>
-                                ))}
-                            </Stack>
-                        </Navbar>
-                    </MediaQuery>
-                }
-            >
+                            {items.map((x, i) => (
+                                <a
+                                    key={i}
+                                    href={x.href}
+                                    className={s.button}
+                                    onClick={() => setOpened(false)}
+                                >
+                                    {x.content}
+                                </a>
+                            ))}
+                        </Stack>
+                    </Drawer>
+                </MediaQuery>
                 {children}
             </AppShell>
         </>
