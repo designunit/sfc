@@ -1,4 +1,5 @@
 import { createStyles, Container, SimpleGrid, AspectRatio, Modal } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -86,6 +87,8 @@ export const CitiesVideos = () => {
     const [opened, setOpened] = useState(false)
     const [url, setUrl] = useState(data[0].url)
 
+    const breakpoint = useMediaQuery('(max-width: 768px)')
+
     return (
         <>
 
@@ -93,7 +96,7 @@ export const CitiesVideos = () => {
                 centered
                 opened={opened}
                 onClose={() => setOpened(false)}
-                size='calc(min(80%, 1200px))'
+                size={breakpoint ? 'calc(min(100%, 1200px))' : 'calc(min(80%, 1200px))'}
             >
 
                 <AspectRatio ratio={16 / 9}>
