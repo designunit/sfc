@@ -37,6 +37,7 @@ export const IndexButtons = () => {
                             component='a'
                             variant='outline'
                             href='https://forms.gle/Hca8mAZx6xKkkMyVA'
+                            target="_blank"
                         >
                             Записаться в базу экспертов сообщества
                         </Button>
@@ -49,6 +50,7 @@ export const IndexButtons = () => {
                             component='a'
                             variant='outline'
                             href='https://mesto.io/BCQEKSXSGI265YHO'
+                            target="_blank"
                         >
                             Перейти к картированию деревьев
                         </Button>

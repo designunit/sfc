@@ -152,7 +152,9 @@ export const PageLayout: React.FC = ({ children }) => {
                                         </Link>
                                     ))}
 
-                                    <a href='https://www.facebook.com/seeds.for.communities'>
+                                    <a href='https://www.facebook.com/seeds.for.communities'
+                                        target="_blank"
+                                    >
                                         <Button
                                             variant='outline'
                                             styles={{

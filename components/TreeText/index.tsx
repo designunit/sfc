@@ -45,6 +45,7 @@ export const TreeText = () => {
                                     component='a'
                                     href='https://mesto.io/BCQEKSXSGI265YHO '
                                     variant='outline'
+                                    target="_blank"
                                 >
                                     Перейти к картированию деревьев
                                 </Button>
@@ -55,6 +56,7 @@ export const TreeText = () => {
                                     component='a'
                                     href='https://forms.gle/TVD8zRbwyRTkkEHc9'
                                     variant='outline'
+                                    target="_blank"
                                 >
                                     Присоединиться к инвентаризации
                                 </Button>

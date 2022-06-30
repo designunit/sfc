@@ -69,6 +69,7 @@ export const CitiesText = () => {
                                 component='a'
                                 href='https://www.facebook.com/seeds.for.communities'
                                 variant='outline'
+                                target="_blank"
                             >
                                 FB-группа проекта c лонгридами
                             </Button>

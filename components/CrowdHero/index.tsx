@@ -1,7 +1,7 @@
 import { createStyles, Container, Title, Stack, Group } from '@mantine/core'
 import Image from 'next/image'
 
-import one from '/public/crowdforce/croudforse.png'
+import one from '/public/crowdforce/Screenshot 2022-06-30 181725.png'
 
 const useStyles = createStyles((theme) => ({
     container: {

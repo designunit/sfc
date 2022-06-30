@@ -35,6 +35,7 @@ export const CommunityText = () => {
                                 component='a'
                                 href='https://forms.gle/Hca8mAZx6xKkkMyVA'
                                 variant='outline'
+                                target="_blank"
                             >
                                 Записаться в базу экспертов сообщества
                             </Button>

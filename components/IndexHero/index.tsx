@@ -119,11 +119,11 @@ export const IndexHero = () => {
                                         layout='fill'
                                         quality={100}
                                         priority
-                                        objectPosition={i == 2 && 'top center'}
+                                        objectPosition={i == 2 && 'center 25%'}
                                     />
                                     <Overlay
                                         opacity={1}
-                                        color='rgba(0,0,0,.5)'
+                                        color={'rgba(0,0,0,.25)'}
                                         style={{
                                             display: 'flex',
                                             alignItems: 'flex-end',
