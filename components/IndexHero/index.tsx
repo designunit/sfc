@@ -30,27 +30,54 @@ const useStyles = createStyles((theme) => ({
     img: {
         borderRadius: '1rem',
     },
+    overlay: {
+        padding: '4rem',
+
+        [theme.fn.smallerThan('sm')]: {
+            padding: '1rem',
+        },
+    }
 }))
 
 const data = [
     {
         src: one,
-        content: 'Программа Зеленые города',
+        content: (
+            <>
+                Узнать больше о программе Зеленые города<br />
+                и посмотреть видео со стажировок и семинаров
+            </>
+        ),
         href: '/green-cities'
     },
     {
         src: two,
-        content: 'Инвентаризация деревьев',
+        content: (
+            <>
+                Используйте приложение для отметки деревьев,<br />
+                чтобы сохранить их от случайной вырубки
+            </>
+        ),
         href: '/tree-cartography'
     },
     {
         src: three,
-        content: 'Croudforse',
+        content: (
+            <>
+                Используйте Croudforce для организации работ<br />
+                по уходу за садом внутри вашего сообщества
+            </>
+        ),
         href: '/crowdforce'
     },
     {
         src: four,
-        content: 'сообщество',
+        content: (
+            <>
+                Присоединяйтесь к нашему сообществу<br />
+                чтобы найти единомышленников и поддержку
+            </>
+        ),
         href: '/community'
     },
 ]
@@ -97,13 +124,15 @@ export const IndexHero = () => {
                                         color='transeparent'
                                         style={{
                                             display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
+                                            alignItems: 'flex-end',
+                                            justifyContent: 'flex-end',
                                         }}
+                                        className={s.overlay}
                                     >
                                         <Title
+                                            order={2}
                                             style={{
-                                                textAlign: 'center',
+                                                textAlign: 'right',
                                             }}
                                         >
                                             <Text

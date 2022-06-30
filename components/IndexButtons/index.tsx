@@ -18,7 +18,7 @@ export const IndexButtons = () => {
                 className={s.container}
             >
                 <Group>
-                    <Link
+                    {/* <Link
                         href='https://www.facebook.com/seeds.for.communities'
                     >
                         <Button
@@ -28,7 +28,7 @@ export const IndexButtons = () => {
                         >
                             FB
                         </Button>
-                    </Link>
+                    </Link> */}
 
                     <Link
                         href='https://forms.gle/Hca8mAZx6xKkkMyVA'
@@ -38,7 +38,7 @@ export const IndexButtons = () => {
                             variant='outline'
                             href='https://forms.gle/Hca8mAZx6xKkkMyVA'
                         >
-                            форма у базу экспертов
+                            Записаться в базу экспертов сообщества
                         </Button>
                     </Link>
 
@@ -50,7 +50,7 @@ export const IndexButtons = () => {
                             variant='outline'
                             href='https://mesto.io/BCQEKSXSGI265YHO'
                         >
-                            инвентаризация деревьев
+                            Перейти к картированию деревьев
                         </Button>
                     </Link>
                 </Group>

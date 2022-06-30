@@ -29,14 +29,14 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
             </Head>
             <NextSeo
-                title='TITLE'
-                description='DESCRIPTION'
+                title='Зеленые города'
+                description='Зеленые города - международная программа обмена опытом и практиками об устойчивом развитии городов на основе кооперации, заботы и ответственности.'
                 openGraph={{
                     images: [
                         {
-                            url: '/hero.svg',
-                            width: 397,
-                            height: 277,
+                            url: '/meta.jpeg',
+                            width: 182,
+                            height: 156,
                         },
                     ]
                 }}
@@ -57,11 +57,11 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                         padding: '0 !important',
                     },
                     'b': {
-                        fontWeight: '900 !important',
+                        fontWeight: '900 !important' as 'bolder',
                     },
                     'h1,h2,h3,h4,h5,h6': {
                         letterSpacing: .5,
-                        fontWeight: '900 !important',
+                        fontWeight: '900 !important' as 'bolder',
                     }
                 })}
             />

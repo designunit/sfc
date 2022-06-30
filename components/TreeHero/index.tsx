@@ -16,6 +16,7 @@ const useStyles = createStyles((theme) => ({
         [theme.fn.smallerThan('sm')]: {
             flexFlow: 'column',
             '& > div': {
+                minHeight: 300,
                 minWidth: '100%',
             }
         },
@@ -27,7 +28,7 @@ const useStyles = createStyles((theme) => ({
     },
     img: {
         position: 'relative',
-        minHeight: 300,
+        minHeight: 500,
         '& > span': {
             borderRadius: '1rem',
         }
@@ -46,16 +47,6 @@ export const TreeHero = () => {
                         grow
                         className={s.images}
                     >
-                        <div
-                            className={s.img}
-                        >
-                            <Image
-                                src={one}
-                                layout='fill'
-                                objectFit='cover'
-                                quality={100}
-                            />
-                        </div>
                         <div
                             className={s.img}
                         >
