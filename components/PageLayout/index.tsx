@@ -11,7 +11,7 @@ import goroda from '/public/partners/Seeds-of-community-3.png'
 
 const items = [
     {
-        content: 'программа Зеленые Города',
+        content: 'Программа Зеленые Города',
         href: '/green-cities'
     },
     {
@@ -23,7 +23,7 @@ const items = [
         href: '/crowdforce',
     },
     {
-        content: 'наше сообщество',
+        content: 'Наше сообщество',
         href: '/community',
     },
 ]
@@ -68,7 +68,13 @@ const useStyles = createStyles((theme) => ({
                 minWidth: 75,
             },
         }
-    }
+    },
+
+    logo: {
+        [theme.fn.smallerThan('lg')]: {
+            fontSize: '1rem !important',
+        }
+    },
 }))
 
 export const PageLayout: React.FC = ({ children }) => {
@@ -93,11 +99,13 @@ export const PageLayout: React.FC = ({ children }) => {
                                     style={{
                                         textDecoration: 'none',
                                     }}
+                                    onClick={() => setOpened(false)}
                                 >
                                     <Title
                                         style={{
                                             height: '100%',
                                         }}
+                                        className={s.logo}
                                     >
                                         <Text
                                             inherit

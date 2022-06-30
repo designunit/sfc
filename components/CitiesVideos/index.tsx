@@ -67,7 +67,6 @@ const data = [
         src: 'https://img.youtube.com/vi/tM39N2rlVbw/hqdefault.jpg',
         url: 'https://www.youtube.com/embed/tM39N2rlVbw'
     },
-
     {
         src: 'https://img.youtube.com/vi/UZy3hv3ReK0/hqdefault.jpg',
         url: 'https://www.youtube.com/embed/UZy3hv3ReK0'
@@ -94,8 +93,7 @@ export const CitiesVideos = () => {
                 centered
                 opened={opened}
                 onClose={() => setOpened(false)}
-                withCloseButton={false}
-                size='calc(min(100%, 1200px))'
+                size='calc(min(80%, 1200px))'
             >
 
                 <AspectRatio ratio={16 / 9}>

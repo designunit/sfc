@@ -97,6 +97,7 @@ export const IndexHero = () => {
                     loop
                     autoplay
                     modules={[Autoplay]}
+                    speed={1000}
                 >
                     {data.map((x, i) => (
                         <SwiperSlide>
@@ -118,14 +119,16 @@ export const IndexHero = () => {
                                         layout='fill'
                                         quality={100}
                                         priority
+                                        objectPosition={i == 2 && 'top center'}
                                     />
                                     <Overlay
                                         opacity={1}
-                                        color='transeparent'
+                                        color='rgba(0,0,0,.5)'
                                         style={{
                                             display: 'flex',
                                             alignItems: 'flex-end',
                                             justifyContent: 'flex-end',
+                                            borderRadius: '1rem',
                                         }}
                                         className={s.overlay}
                                     >
