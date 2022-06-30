@@ -67,6 +67,19 @@ const data = [
         src: 'https://img.youtube.com/vi/tM39N2rlVbw/hqdefault.jpg',
         url: 'https://www.youtube.com/embed/tM39N2rlVbw'
     },
+
+    {
+        src: 'https://img.youtube.com/vi/UZy3hv3ReK0/hqdefault.jpg',
+        url: 'https://www.youtube.com/embed/UZy3hv3ReK0'
+    },
+    {
+        src: 'https://img.youtube.com/vi/ErTRvDmX0nA/hqdefault.jpg',
+        url: 'https://www.youtube.com/embed/ErTRvDmX0nA'
+    },
+    {
+        src: 'https://img.youtube.com/vi/aF1uYXbHv_8/hqdefault.jpg',
+        url: 'https://www.youtube.com/embed/aF1uYXbHv_8'
+    },
 ]
 
 export const CitiesVideos = () => {
