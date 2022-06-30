@@ -9,7 +9,7 @@ const useStyles = createStyles((theme) => ({
     container: {
         position: 'relative',
         maxWidth: 1220,
-        marginTop: '4rem',
+        marginTop: '6rem',
     },
     images: {
         [theme.fn.smallerThan('sm')]: {
@@ -43,10 +43,6 @@ export const CommunityHero = () => {
                 className={s.container}
             >
                 <Stack spacing='lg'>
-                    <Title>
-                        Наше сообщество
-                    </Title>
-
                     <Group
                         grow
                         className={s.images}
@@ -58,9 +54,14 @@ export const CommunityHero = () => {
                                 src={one}
                                 layout='fill'
                                 objectFit='cover'
+                                quality={100}
                             />
                         </div>
                     </Group>
+                    
+                    <Title>
+                        Наше сообщество
+                    </Title>
                 </Stack>
             </Container>
         </>

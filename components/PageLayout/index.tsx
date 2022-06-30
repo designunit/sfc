@@ -1,4 +1,4 @@
-import { createStyles, Header, Footer, Group, Container, Text, AppShell, Navbar, MediaQuery, Burger, Center, Stack, Button, Drawer } from '@mantine/core'
+import { createStyles, Header, Footer, Group, Container, Text, AppShell, Navbar, MediaQuery, Burger, Center, Stack, Button, Drawer, Title } from '@mantine/core'
 import logo from '/public/logo.svg'
 import logoDom from '/public/logoDom.svg'
 import Image from 'next/image'
@@ -37,6 +37,7 @@ const useStyles = createStyles((theme) => ({
         },
     },
     footer: {
+        marginTop: 40,
         paddingTop: 20,
         marginBottom: 20,
     },
@@ -88,11 +89,29 @@ export const PageLayout: React.FC = ({ children }) => {
                             className={s.container}
                         >
                             <Link href='/'>
-                                <a>
-                                    {/* <Image
-                                        src={logo}
-                                    /> */}
-                                    ЛОГО
+                                <a
+                                    style={{
+                                        textDecoration: 'none',
+                                    }}
+                                >
+                                    <Title
+                                        style={{
+                                            height: '100%',
+                                        }}
+                                    >
+                                        <Text
+                                            inherit
+                                            variant='gradient'
+                                            gradient={{ from: 'green', to: 'lime' }}
+                                            style={{
+                                                height: '100%',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                            }}
+                                        >
+                                            Зеленые города
+                                        </Text>
+                                    </Title>
                                 </a>
                             </Link>
 
@@ -176,37 +195,6 @@ export const PageLayout: React.FC = ({ children }) => {
                         </Container>
                     </Footer>
                 )}
-
-            // navbar={
-            //     <MediaQuery largerThan={'sm'} styles={{ display: 'none' }}>
-            //         <Navbar
-            //             hiddenBreakpoint={'sm'}
-            //             hidden={!opened}
-            //             fixed
-            //             style={{
-            //                 zIndex: 400,
-            //                 height: '100%',
-            //                 paddingLeft: '1rem',
-            //                 paddingTop: '1rem',
-            //             }}
-            //         >
-            //             <Stack
-            //                 spacing={24}
-            //             >
-            //                 {items.map((x, i) => (
-            //                     <a
-            //                         key={i}
-            //                         href={x.href}
-            //                         className={s.button}
-            //                         onClick={() => setOpened(false)}
-            //                     >
-            //                         {x.content}
-            //                     </a>
-            //                 ))}
-            //             </Stack>
-            //         </Navbar>
-            //     </MediaQuery>
-            // }
             >
                 <MediaQuery largerThan={'sm'} styles={{ display: 'none' }}>
                     <Drawer
@@ -219,19 +207,24 @@ export const PageLayout: React.FC = ({ children }) => {
                             spacing={24}
                             style={{
                                 paddingTop: 40,
-                                paddingRight: '1.5rem',
-                                textAlign: 'right',
+                                paddingRight: '.5rem',
+                                alignItems: 'flex-end'
                             }}
                         >
                             {items.map((x, i) => (
-                                <a
+                                <Link
                                     key={i}
                                     href={x.href}
-                                    className={s.button}
-                                    onClick={() => setOpened(false)}
                                 >
-                                    {x.content}
-                                </a>
+                                    <Button
+                                        variant='subtle'
+                                        component='a'
+                                        className={s.button}
+                                        onClick={() => setOpened(false)}
+                                    >
+                                        {x.content}
+                                    </Button>
+                                </Link>
                             ))}
                         </Stack>
                     </Drawer>

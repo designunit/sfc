@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => ({
     container: {
         position: 'relative',
         maxWidth: 1220,
-        marginTop: '4rem',
+        marginTop: '6rem',
     },
     images: {
         [theme.fn.smallerThan('sm')]: {
@@ -42,10 +42,6 @@ export const TreeHero = () => {
                 className={s.container}
             >
                 <Stack spacing='lg'>
-                    <Title>
-                        Картирование деревьев
-                    </Title>
-
                     <Group
                         grow
                         className={s.images}
@@ -57,6 +53,7 @@ export const TreeHero = () => {
                                 src={one}
                                 layout='fill'
                                 objectFit='cover'
+                                quality={100}
                             />
                         </div>
                         <div
@@ -69,6 +66,10 @@ export const TreeHero = () => {
                             />
                         </div>
                     </Group>
+                    
+                    <Title>
+                        Картирование деревьев
+                    </Title>
                 </Stack>
             </Container>
         </>

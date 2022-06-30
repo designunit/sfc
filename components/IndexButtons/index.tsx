@@ -23,7 +23,7 @@ export const IndexButtons = () => {
                     >
                         <Button
                             component='a'
-                            variant='subtle'
+                            variant='outline'
                             href='https://www.facebook.com/seeds.for.communities'
                         >
                             FB
@@ -35,7 +35,7 @@ export const IndexButtons = () => {
                     >
                         <Button
                             component='a'
-                            variant='subtle'
+                            variant='outline'
                             href='https://forms.gle/Hca8mAZx6xKkkMyVA'
                         >
                             форма у базу экспертов
@@ -47,7 +47,7 @@ export const IndexButtons = () => {
                     >
                         <Button
                             component='a'
-                            variant='subtle'
+                            variant='outline'
                             href='https://mesto.io/BCQEKSXSGI265YHO'
                         >
                             инвентаризация деревьев

@@ -7,7 +7,7 @@ const useStyles = createStyles((theme) => ({
     container: {
         position: 'relative',
         maxWidth: 1220,
-        marginTop: '4rem',
+        marginTop: '6rem',
     },
     images: {
         [theme.fn.smallerThan('sm')]: {
@@ -40,10 +40,6 @@ export const CrowdHero = () => {
                 className={s.container}
             >
                 <Stack spacing='lg'>
-                    <Title>
-                        Croudforce
-                    </Title>
-
                     <Group
                         grow
                         className={s.images}
@@ -59,6 +55,10 @@ export const CrowdHero = () => {
                             />
                         </div>
                     </Group>
+
+                    <Title>
+                        Croudforce
+                    </Title>
                 </Stack>
             </Container>
         </>

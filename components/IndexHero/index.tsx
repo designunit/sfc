@@ -1,4 +1,4 @@
-import { createStyles, Container, Overlay, Center, Title } from '@mantine/core'
+import { createStyles, Container, Overlay, Center, Title, Text } from '@mantine/core'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -8,6 +8,7 @@ import one from '/public/index/photo_2021-07-12_16-12-24 (2).jpg'
 import two from '/public/index/mesto_io_1.png'
 import three from '/public/index/Gk_X4epiITU.jpg'
 import four from '/public/index/VW2G97fzdcs.jpg'
+import { Autoplay } from 'swiper'
 
 const useStyles = createStyles((theme) => ({
     container: {
@@ -35,22 +36,22 @@ const data = [
     {
         src: one,
         content: 'Программа Зеленые города',
-        href: '/'
+        href: '/green-cities'
     },
     {
         src: two,
         content: 'Инвентаризация деревьев',
-        href: '/'
+        href: '/tree-cartography'
     },
     {
         src: three,
         content: 'Croudforse',
-        href: '/'
+        href: '/crowdforce'
     },
     {
         src: four,
         content: 'сообщество',
-        href: '/'
+        href: '/community'
     },
 ]
 
@@ -67,6 +68,8 @@ export const IndexHero = () => {
                     spaceBetween={50}
                     slidesPerView={1}
                     loop
+                    autoplay
+                    modules={[Autoplay]}
                 >
                     {data.map((x, i) => (
                         <SwiperSlide>
@@ -87,6 +90,7 @@ export const IndexHero = () => {
                                         objectFit='cover'
                                         layout='fill'
                                         quality={100}
+                                        priority
                                     />
                                     <Overlay
                                         opacity={1}
@@ -102,7 +106,13 @@ export const IndexHero = () => {
                                                 textAlign: 'center',
                                             }}
                                         >
-                                            {x.content}
+                                            <Text
+                                                inherit
+                                                variant='gradient'
+                                                gradient={{ from: 'green', to: 'lime' }}
+                                            >
+                                                {x.content}
+                                            </Text>
                                         </Title>
                                     </Overlay>
                                 </a>

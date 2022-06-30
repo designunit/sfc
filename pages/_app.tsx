@@ -42,6 +42,8 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                 }}
             />
 
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"></link>
+
             <Global
                 styles={theme => ({
                     '*': {
@@ -54,9 +56,13 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                     'main': {
                         padding: '0 !important',
                     },
-                    'a': {
-                        color: theme.colors.green[7],
+                    'b': {
+                        fontWeight: '900 !important',
                     },
+                    'h1,h2,h3,h4,h5,h6': {
+                        letterSpacing: .5,
+                        fontWeight: '900 !important',
+                    }
                 })}
             />
 
@@ -66,34 +72,11 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                     withNormalizeCSS
                     theme={{
                         colorScheme,
-                        // fontFamily: 'ObjectSans',
-                        // fontSizes: {
-                        //     'lg': 12,
-                        //     'md': 12,
-                        //     'sm': 12,
-                        //     'xl': 12,
-                        //     'xs': 12,
-                        // },
-                        // headings: {
-                        //     fontFamily: 'ObjectSans',
-                        //     h1: {
-                        //         fontSize: 37,
-                        //     },
-                        // },
+                        fontFamily: 'Roboto',
+                        headings: {
+                            fontFamily: 'Roboto',
+                        },
                         primaryColor: 'green',
-                        // defaultRadius: 8,
-                    }}
-                    styles={{
-                        // Text: theme => ({
-                        //     root: {
-                        //         color: theme.colors.secondary[0],
-                        //     }
-                        // }),
-                        // Title: theme => ({
-                        //     root: {
-                        //         color: theme.colors.secondary[0],
-                        //     }
-                        // }),
                     }}
                 >
                     <FormContextProvider>

@@ -4,19 +4,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import one from '/public/cities/photo_2021-07-12_16-12-21 (20).jpg'
-import two from '/public/cities/green-cities.png'
+// import two from '/public/cities/green-cities.png'
 
 const useStyles = createStyles((theme) => ({
     container: {
         position: 'relative',
         maxWidth: 1220,
-        marginTop: '4rem',
+        marginTop: '6rem',
     },
     images: {
         [theme.fn.smallerThan('sm')]: {
             flexFlow: 'column',
             '& > div': {
                 minWidth: '100%',
+                minHeight: 300,
             }
         },
         [theme.fn.smallerThan('xs')]: {
@@ -27,7 +28,7 @@ const useStyles = createStyles((theme) => ({
     },
     img: {
         position: 'relative',
-        minHeight: 300,
+        minHeight: 500,
         '& > span': {
             borderRadius: '1rem',
         }
@@ -43,10 +44,6 @@ export const CitiesHero = () => {
                 className={s.container}
             >
                 <Stack spacing='lg'>
-                    <Title>
-                        Зеленые города | Seeds for communties | 2021
-                    </Title>
-
                     <Group
                         grow
                         className={s.images}
@@ -58,18 +55,14 @@ export const CitiesHero = () => {
                                 src={one}
                                 layout='fill'
                                 objectFit='cover'
-                            />
-                        </div>
-                        <div
-                            className={s.img}
-                        >
-                            <Image
-                                src={two}
-                                layout='fill'
-                                objectFit='cover'
+                                quality={100}
                             />
                         </div>
                     </Group>
+
+                    <Title>
+                        Зеленые города | Seeds for communties | 2021
+                    </Title>
                 </Stack>
             </Container>
         </>

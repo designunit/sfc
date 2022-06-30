@@ -44,7 +44,7 @@ export const TreeText = () => {
                                 <Button
                                     component='a'
                                     href='https://mesto.io/BCQEKSXSGI265YHO '
-                                    variant='subtle'
+                                    variant='outline'
                                 >
                                     Приложение для Саратова
                                 </Button>
@@ -54,7 +54,7 @@ export const TreeText = () => {
                                 <Button
                                     component='a'
                                     href='https://forms.gle/TVD8zRbwyRTkkEHc9'
-                                    variant='subtle'
+                                    variant='outline'
                                 >
                                     присоединиться к инвентаризации
                                 </Button>
