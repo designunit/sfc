@@ -19,7 +19,7 @@ const items = [
         href: '/tree-cartography'
     },
     {
-        content: 'Croudforce',
+        content: 'Crowdforce',
         href: '/crowdforce',
     },
     {
@@ -190,18 +190,22 @@ export const PageLayout: React.FC = ({ children }) => {
                                 position='apart'
                             >
                                 <div>
-                                    <Image
-                                        src={mosty}
-                                        layout='fill'
-                                        objectFit='contain'
-                                    />
+                                    <a href='http://obmen.org/' target='_blank'>
+                                        <Image
+                                            src={mosty}
+                                            layout='fill'
+                                            objectFit='contain'
+                                        />
+                                    </a>
                                 </div>
                                 <div>
-                                    <Image
-                                        src={mrl}
-                                        layout='fill'
-                                        objectFit='contain'
-                                    />
+                                    <a href='http://obmen.org/' target='_blank'>
+                                        <Image
+                                            src={mrl}
+                                            layout='fill'
+                                            objectFit='contain'
+                                        />
+                                    </a>
                                 </div>
                                 <div>
                                     <Image

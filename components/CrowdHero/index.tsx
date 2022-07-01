@@ -57,7 +57,7 @@ export const CrowdHero = () => {
                     </Group>
 
                     <Title>
-                        Croudforce
+                        Crowdforce
                     </Title>
                 </Stack>
             </Container>
