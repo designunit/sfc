@@ -13,10 +13,10 @@ import { NavbarContextProvider } from '../contexts/navbar'
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     const { Component, pageProps } = props
-    const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme)
+    const [colorScheme, setColorScheme] = useState<ColorScheme>('light')
 
-    const toggleColorScheme = (value?: ColorScheme) => {
-        const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark')
+    const toggleColorScheme = () => {
+        const nextColorScheme = 'light'
         setColorScheme(nextColorScheme)
         setCookies('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 })
     }
@@ -93,7 +93,3 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         </>
     )
 }
-
-App.getStaticProps = ({ ctx }: { ctx: GetServerSidePropsContext }) => ({
-    colorScheme: getCookie('mantine-color-scheme', ctx) || 'light',
-})
