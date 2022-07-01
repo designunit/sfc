@@ -199,7 +199,7 @@ export const PageLayout: React.FC = ({ children }) => {
                                     </a>
                                 </div>
                                 <div>
-                                    <a href='http://obmen.org/' target='_blank'>
+                                    <a href='http://mensch-raum-land.org/' target='_blank'>
                                         <Image
                                             src={mrl}
                                             layout='fill'
