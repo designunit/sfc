@@ -23,17 +23,16 @@ export const CrowdText = () => {
                         Crowdforce - вебприложение, которое помогает сообществам системно ухаживать за своими садами. Crowdforce помогает навести порядок в расписании садовых работ и создает возможность каждому внести свой вклад в общее дело. Чат-бот оповещает всех членов сообщества о задачах, которые есть в саду. Чтобы каждый могу найти себе занятие по душе и в то время, которое ему удобно.
                     </Text>
 
-                    {/* <div>
-                        <Link href={'https://www.facebook.com/seeds.for.communities'}>
+                    <div>
+                        <Link href={'https://crowdforce.ru/'} passHref>
                             <Button
                                 component='a'
-                                href='https://www.facebook.com/seeds.for.communities'
                                 variant='outline'
                             >
-                                FB-группа проекта c лонгридами
+                                Сайт проекта
                             </Button>
                         </Link>
-                    </div> */}
+                    </div>
                 </Stack>
             </Container>
         </>
