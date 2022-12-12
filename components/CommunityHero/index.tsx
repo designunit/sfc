@@ -58,10 +58,6 @@ export const CommunityHero = () => {
                             />
                         </div>
                     </Group>
-                    
-                    <Title>
-                        Наше сообщество
-                    </Title>
                 </Stack>
             </Container>
         </>
