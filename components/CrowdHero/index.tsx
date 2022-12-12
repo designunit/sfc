@@ -55,10 +55,6 @@ export const CrowdHero = () => {
                             />
                         </div>
                     </Group>
-
-                    <Title>
-                        Crowdforce
-                    </Title>
                 </Stack>
             </Container>
         </>
