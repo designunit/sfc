@@ -57,10 +57,6 @@ export const TreeHero = () => {
                             />
                         </div>
                     </Group>
-                    
-                    <Title>
-                        Картирование деревьев
-                    </Title>
                 </Stack>
             </Container>
         </>
