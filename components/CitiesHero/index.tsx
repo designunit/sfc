@@ -59,10 +59,6 @@ export const CitiesHero = () => {
                             />
                         </div>
                     </Group>
-
-                    <Title>
-                        Зеленые города | Seeds for communties | 2021
-                    </Title>
                 </Stack>
             </Container>
         </>

@@ -1,4 +1,4 @@
-import { Button, Title, Text } from '@mantine/core'
+import { Button, Title, Text, List } from '@mantine/core'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -34,5 +34,7 @@ export const components = {
             style={{ display: 'inline' }}
         />
     ),
-    Text: (props) => <Text {...props} />
+    Text: (props) => <Text {...props} />,
+    ul: (props) => <List {...props} />,
+    li: (props) => <List.Item {...props} />,
 }
