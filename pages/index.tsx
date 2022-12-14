@@ -1,11 +1,10 @@
 import { PageLayout } from '../components/PageLayout'
 import { IndexHero } from '../components/IndexHero'
-import { IndexText } from '../components/IndexText'
 import { GetServerSideProps } from 'next/types'
 import { MDXRemote } from 'next-mdx-remote'
 import { getPageBySlug } from '../server/lib'
 import { serialize } from 'next-mdx-remote/serialize'
-import { components, StaticProps } from '../client/lib'
+import { components, StaticProps } from '../mdx/lib'
 import { useI18n } from 'next-localization'
 import { Container, createStyles } from '@mantine/core'
 
@@ -19,7 +18,6 @@ const useStyles = createStyles((theme) => ({
 
 export default function HomePage({ source }) {
     const { classes: s } = useStyles()
-    const { t } = useI18n()
     return (
         <PageLayout>
             <IndexHero />

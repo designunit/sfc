@@ -5,7 +5,7 @@ import { CitiesVideos } from '../components/CitiesVideos'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { Container, createStyles } from '@mantine/core'
-import { components, StaticProps } from '../client/lib'
+import { components, StaticProps } from '../mdx/lib'
 import { GetServerSideProps } from 'next'
 import { getPageBySlug } from '../server/lib'
 

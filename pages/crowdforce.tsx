@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next'
-import { components, StaticProps } from '../client/lib'
+import { components, StaticProps } from '../mdx/lib'
 import { CrowdHero } from '../components/CrowdHero'
 import { PageLayout } from '../components/PageLayout'
 import { getPageBySlug } from '../server/lib'
