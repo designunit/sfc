@@ -1,4 +1,4 @@
-import { createStyles, Header, Footer, Group, Container, Text, AppShell, Navbar, MediaQuery, Burger, Center, Stack, Button, Drawer, Title } from '@mantine/core'
+import { createStyles, Header, Footer, Group, Container, Text, AppShell, Navbar, MediaQuery, Burger, Center, Stack, Button, Drawer, Title, Select } from '@mantine/core'
 import logo from '/public/logo.svg'
 import logoDom from '/public/logoDom.svg'
 import Image from 'next/image'
@@ -8,25 +8,8 @@ import mosty from '/public/partners/bridge it logo.png'
 import mrl from '/public/partners/MRL-Logo-w1200-color Kopie.png'
 import midGerm from '/public/partners/AA_DTP_CMYK_russ.svg'
 import goroda from '/public/partners/Seeds-of-community-3.png'
-
-const items = [
-    {
-        content: 'Программа Зеленые Города',
-        href: '/green-cities'
-    },
-    {
-        content: 'Картирование деревьев',
-        href: '/tree-cartography'
-    },
-    {
-        content: 'Crowdforce',
-        href: '/crowdforce',
-    },
-    {
-        content: 'Наше сообщество',
-        href: '/community',
-    },
-]
+import { useI18n } from 'next-localization'
+import { useRouter } from 'next/router'
 
 const useStyles = createStyles((theme) => ({
     header: {
@@ -79,6 +62,27 @@ const useStyles = createStyles((theme) => ({
 
 export const PageLayout: React.FC = ({ children }) => {
     const { classes: s, cx, } = useStyles()
+    const { t } = useI18n()
+    const router = useRouter()
+
+    const items = [
+        {
+            content: t("menu_green-cities"),
+            href: '/green-cities'
+        },
+        {
+            content: t("menu_tree-cartography"),
+            href: '/tree-cartography'
+        },
+        {
+            content: t("menu_crowdforce"),
+            href: '/crowdforce',
+        },
+        {
+            content: t("menu_community"),
+            href: '/community',
+        },
+    ]
 
     const [opened, setOpened] = useState(false)
     return (
@@ -115,9 +119,10 @@ export const PageLayout: React.FC = ({ children }) => {
                                                 height: '100%',
                                                 display: 'flex',
                                                 alignItems: 'center',
+                                                whiteSpace: 'nowrap',
                                             }}
                                         >
-                                            Зеленые города
+                                            {t("logo")}
                                         </Text>
                                     </Title>
                                 </a>
@@ -135,7 +140,7 @@ export const PageLayout: React.FC = ({ children }) => {
                             </MediaQuery>
                             <MediaQuery smallerThan={'sm'} styles={{ display: 'none' }}>
                                 <Group
-                                    spacing={24}
+                                    spacing={12}
                                 >
                                     {items.map((x, i) => (
                                         <Link
@@ -171,6 +176,25 @@ export const PageLayout: React.FC = ({ children }) => {
                                     </a>
                                 </Group>
                             </MediaQuery>
+
+                            <MediaQuery smallerThan={'sm'} styles={{ display: 'none' }}>
+                                <Select
+                                    sx={{
+                                        maxWidth: "4.5rem",
+                                        alignSelf: 'center',
+                                        marginBottom: 2,
+                                        marginLeft: '1rem',
+                                    }}
+                                    zIndex={501}
+                                    defaultValue={router.locale}
+                                    onChange={value => router.push("/", "/", { locale: value })}
+                                    data={[
+                                        { value: "ru", label: "RU" },
+                                        { value: "en", label: "EN" },
+                                    ]}
+                                />
+                            </MediaQuery>
+
                         </Container>
                     </Header>
                 )}
@@ -256,6 +280,19 @@ export const PageLayout: React.FC = ({ children }) => {
                                     </Button>
                                 </Link>
                             ))}
+                            <Select
+                                sx={{
+                                    maxWidth: "4.5rem",
+                                    marginBottom: 2,
+                                }}
+                                zIndex={501}
+                                defaultValue={router.locale}
+                                onChange={value => router.push("/", "/", { locale: value })}
+                                data={[
+                                    { value: "ru", label: "RU" },
+                                    { value: "en", label: "EN" },
+                                ]}
+                            />
                         </Stack>
                     </Drawer>
                 </MediaQuery>

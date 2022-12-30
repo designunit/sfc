@@ -10,6 +10,8 @@ import { ModalsProvider } from '@mantine/modals'
 import { IdeaModal } from '../components/IdeaModal'
 import { FormContextProvider } from '../contexts/form'
 import { NavbarContextProvider } from '../contexts/navbar'
+import { useRouter } from 'next/router'
+import { I18nProvider } from 'next-localization'
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     const { Component, pageProps } = props
@@ -20,6 +22,9 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         setColorScheme(nextColorScheme)
         setCookies('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 })
     }
+
+    const router = useRouter()
+    const { lngDict, ...pagePropsRest } = pageProps
 
     return (
         <>
@@ -83,7 +88,9 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                         <NavbarContextProvider>
                             <ModalsProvider modals={{ idea: IdeaModal }}>
                                 <NotificationsProvider>
-                                    <Component {...pageProps} />
+                                    <I18nProvider lngDict={lngDict} locale={router.locale}>
+                                        <Component {...pagePropsRest} />
+                                    </I18nProvider>
                                 </NotificationsProvider>
                             </ModalsProvider>
                         </NavbarContextProvider>
