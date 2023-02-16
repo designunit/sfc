@@ -291,6 +291,8 @@ export const PageLayout: React.FC = ({ children }) => {
                                 data={[
                                     { value: "ru", label: "RU" },
                                     { value: "en", label: "EN" },
+                                    { value: "de", label: "DE" },
+                                    { value: "ar", label: "AR" },
                                 ]}
                             />
                         </Stack>
