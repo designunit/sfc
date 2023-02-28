@@ -3,7 +3,7 @@ module.exports = {
         domains: ['img.youtube.com'],
     },
     i18n: {
-        locales: ["ru", "en"],
+        locales: ["ru", "en", "de", "ar"],
         defaultLocale: "ru",
     },
 }
